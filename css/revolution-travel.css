@@ -1,0 +1,136 @@
+html { /* tell mobile broswer not to change root font size */
+    /* -moz and -webkit are known as "vendor prefixes" */
+	-moz-text-size-adjust: 100%; /* Modzilla Firefox */
+	-webkit-text-size-adjust: 100%; /* Google Chrome and Safari, Edge */
+	text-size-adjust: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 28px; /* a little smaller than default h1 2em (32px) */
+    line-height: 36px; /* add a bit of space below h1 (before first p tag) */
+}
+
+h2 {
+    font-size: 18px; /* smaller than default h2 1.5em (24px) */
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+h1, h2 {
+    font-weight: normal; /* turn off default bold for h1 and h2 */
+    color: #e45c09;
+}
+
+p {
+    line-height: 24px; /* increase gap between lines of regular paragraph text */
+    margin-bottom: 22px; /* add a bit of extra space at end of each paragraph */
+}
+
+li { /* add gap between list items not in nav */
+    line-height: 24px;
+}
+
+header {
+    margin-bottom: 20px; /* mb30 */
+    border-bottom: 1px solid #ccc; /* add border to bottom ONLY of header, like an underline */
+    padding-top: 20px;
+    padding-bottom: 20px; /* add space between the globe logo and the bottom border line */
+    text-align: center; /* center logo img in header; imgs align like text for css */
+}
+
+nav {
+    margin-bottom: 20px; /* mb30 */
+    text-align: center;
+}
+
+nav ul { /* nav ul targets ul's in nav ONLY (leaving other ul's elsewhere alone) */
+    list-style-type: none; /* turn off dots on bulleted list */
+    /* ul has a lot of default margin and padding--turn off both */
+    margin: 0;
+    padding: 0;
+}
+
+nav li { /* nav li targets li's in nav ONLY (leaving other li's elsewhere alone) */
+    display: inline-block; /* displays inline w margin / padding of block */
+}
+
+nav a { /* nav li targets a-tags (links) in nav ONLY */
+    /* background-color: #000; */
+    padding: 10px; /* increase clickable area, cuz padding around links is clickable too */
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-block; 
+}
+
+nav a:visited {
+    color: #13aad7;
+}
+
+nav a:hover, nav a:focus {
+    color: #e45c09;
+    text-decoration: none; /* no underline on mouseover or tab to nav link */
+}
+
+main {
+    width: 90%; /* % is always relative to parent elem */
+    max-width: 800px; /* width will be 90% of body up to a point -- never more than 800px */
+    margin: 0 auto 30px; /* T R B L 0 auto 30px auto centers main within parent (body) */
+}
+
+footer {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 30px; /* centers footer within parent (body) */
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+img {
+    max-width: 100%; /* allow img to shrink w squished browser */
+}
+
+a:link { /* a:link is a link that has not yet been clicked */
+    color: #13aad7;
+    text-decoration: none; /* turn off default link underline */
+}
+
+a:visited { /* a:visited is a link that has been clicked */
+    color: #aaa; /* default visited link color is purplish */
+}
+
+a:hover, a:focus { /* a:hover is a link that being moused over but not clicked */
+    /* a:focus is when the link text has been arrived at through tab */
+    color: #e45c89; /* default visited link color is purplish */
+    text-decoration: underline;
+}
+
+a:active { /* a:active is the moment of actual mousedown / press */
+    color: #2d4;
+}
+
+/* by default, block elements are 100% width and 0 height 
+the only height is forced by the content OR padding */
+/* header, nav, main, footer {
+    border: 3px dotted #aaa;
+} */
+
+/* classes to float little activities logos */
+.img-left {
+    float: left;
+    margin-right: 15px;
+}
+/* css moved to inside the tag itself as style="float:right" */
+/* .img-right {
+    float: right;
+    margin-left: 15px;
+} */
